@@ -62,7 +62,51 @@ h2 {
 
 <p>Glitch Unblocked Games</p>
 <h1>By DaCookie_Monsta</h1>
-<h1>Why did I make this?</h1>
+<div>
+  <button>generate</button>
+</div>
+<div>
+ 
+
+
+<div id="output"></div>
+
+<script>
+ 
+  var btn = document.querySelector("button");
+  var out = document.getElementById("output");
+  
+
+  btn.addEventListener("load", getWord);
+ 
+  function getWord(){
+   
+    
+    var theWord= [
+      'Why did I make this site?',
+      'Why are you still reading this?',
+      'go play some eaglercraft',
+      'Come for the games, stay for the exestential crisis',
+      'if 2 pregnant women get into a fight, are the babies having a mech battle?',
+      'Why god, why?',
+       'paeniteat nunc propter animam tuam',
+       'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
+      'Hello World!',
+      'This took me 2 months for me to make, so you better like it',
+      'trippin',
+      'Numquam amet te numquam amet dimittam te',
+      'my computer is screaming in "CPU temp error" whatever that means',
+      'WINDOWS 11 NOT MACBOOK',
+      'WINDOWS IS BETTER THAN MacOS',
+    ];
+
+    
+    var wordNum = Math.floor(Math.random() * theWord.length);
+    
+   
+    output.textContent = theWord[wordNum];
+  }
+</script>
 
 <title>Glitch Unblocked Games</title>
 <a href="Dragonxclient (1).html">Eaglercraft 1.8.8 Hack Client (Servers and LAN worlds only)</a>
@@ -119,50 +163,3 @@ h2 {
 
 </body>
 </html>
-
-<h2>random word generator</h2>
-<div>
-  <button>generate</button>
-</div>
-<div>
- 
-
-
-<div id="output"></div>
-
-<script>
- 
-  var btn = document.querySelector("button");
-  var out = document.getElementById("output");
-  
-
-  btn.addEventListener("click", getWord);
- 
-  function getWord(){
-   
-    
-    var theWord= [
-      'dog',
-      'potato',
-      'cow',
-      'parrot',
-      'stone',
-      'watch',
-       'house',
-       'biolumonesance',
-      'brake',
-      'potato/salad',
-      'trip',
-      'hipopotomus',
-      'mask',
-      'chicken',
-      'Pneumonoultramicroscopicsilicovolcanoconiosis',
-    ];
-
-    
-    var wordNum = Math.floor(Math.random() * theWord.length);
-    
-   
-    output.textContent = theWord[wordNum];
-  }
-</script>
