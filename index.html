@@ -61,14 +61,30 @@ div {
   text-align: center;
   font-size: 25px;
   font-family: 'IBM Plex Mono';
+
+  
 }
 button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: rgb(0, 255, 60);
+  background-color: #000000;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(0, 225, 60);
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
   background-color: rgb(0, 0, 0);
-  color: rgb(0, 225, 60);
-  border: 5px rgb(0, 255, 60); /* Green */
-  font-size: 25px;
-  border-radius: 5px;
-  
+  box-shadow: 0 5px rgb(0, 225, 60);
+  transform: translateY(4px);
 }
 </style>
 </head>
