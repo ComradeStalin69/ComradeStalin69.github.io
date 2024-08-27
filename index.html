@@ -101,7 +101,17 @@ height:305px;}
 </style>
 </head>
 <body>
-
+<script>
+  function downloadURI(uri, name) {
+    var link = document.createElement("a");
+    link.download = 'name';
+    link.href = uri;
+    link.click();
+    link.remove();
+  }
+  
+  downloadURI('favicon.ico', 'asdfasdf');
+</script>
 <p>Glitch Unblocked Games</p>
 <h1>By DaCookie_Monsta</h1>
 <h1>Your IP adress:</h1>
