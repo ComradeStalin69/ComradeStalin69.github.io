@@ -17,8 +17,7 @@ function clearInputError(inputElement) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-
-    const loginForm = document.querySelector(window.location.href = "http://www.w3schools.com");
+    const loginForm = document.querySelector("#login");
     const createAccountForm = document.querySelector("#createAccount");
 
     document.querySelector("#linkCreateAccount").addEventListener("click", e => {
