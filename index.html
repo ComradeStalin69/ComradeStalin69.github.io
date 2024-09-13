@@ -25,9 +25,10 @@ input,textarea,select {
 </head>
 <body>
     <!-- Textarea -->
-    <textarea type="hidden" id="myTextarea" style="display:none;"
-              rows="1" cols="1" 
-              placeholder="Enter text"></textarea>
+    <textarea cols="50" rows="20" name="text" id="text_id" class="form-control" style="resize:vertical;display:none"></textarea>
+    <button class="show_button">Show/hide textarea</button>
+    <script>$(".show_button").click(function(){$("#text_id").toggle()})</script>
+    
 
     <!-- Button to get textarea value -->
     <button onclick="getValue()">Get Value</button>
