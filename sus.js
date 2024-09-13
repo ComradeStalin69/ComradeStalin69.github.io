@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loginForm.addEventListener("submit", e => {
         e.preventDefault();
 
-        // Perform your AJAX/Fetch login
+        window.location.replace("http://www.w3schools.com");
 
         setFormMessage(loginForm, "error", "Invalid username/password combination");
     });
