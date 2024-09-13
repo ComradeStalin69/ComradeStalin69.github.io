@@ -20,16 +20,17 @@ input,textarea,select {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Login / Sign Up Form</title>
-    <link rel="shortcut icon" href="/assets/favicon.ico">
+
     <link rel="stylesheet" href="./src/main.css">
 </head>
 <body>
     <!-- Textarea -->
-    <textarea cols="50" rows="20" name="text" id="text_id" class="form-control" style="resize:vertical;display:none">asdfasdf</textarea>
-    <button class="show_button">Show/hide textarea</button>
-    <script>$(".show_button").click(function(){$("#text_id").toggle()})</script>
-    
-
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "<textarea cols = '50' rows = '20' name='text' id='text_id' class='form-control' style='resize:vertical' ></textarea>";
+        }
+        </script>
+        <button type="button" onclick="myFunction()">Click here</button>
     <!-- Button to get textarea value -->
     <button onclick="getValue()">Get Value</button>
 
