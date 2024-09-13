@@ -18,6 +18,7 @@ function clearInputError(inputElement) {
 
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector("#login");
+    const loginForm = document.querySelector(window.location.href = "http://www.w3schools.com";);
     const createAccountForm = document.querySelector("#createAccount");
 
     document.querySelector("#linkCreateAccount").addEventListener("click", e => {
@@ -33,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     loginForm.addEventListener("submit", e => {
-        e.preventDefault(window.location.replace("http://www.w3schools.com"););
+        e.preventDefault();
 
         // Perform your AJAX/Fetch login
 
