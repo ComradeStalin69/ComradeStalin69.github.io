@@ -5,12 +5,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-input,textarea,select { 
+input,textarea,select,button { 
     padding: 1px; 
     border: solid 1px #ffffff; 
     font-size: 10pt; 
     color:#f4f4f4; 
     background-color:#ffffff;
+    resize: none;
+
     
 }
 </style>
@@ -25,7 +27,7 @@ input,textarea,select {
 </head>
 <body>
     <!-- Textarea -->
-    <textarea cols = '50' rows = '20' name='text' id='text_id' class='form-control' style='resize:vertical; visibility:hidden'> </textarea>
+    <textarea cols = '5' rows = '5' name='text' id='text_id' class='form-control' style='resize:vertical; visibility:hidden'> </textarea>
 
     <button onClick='document.getElementById("text_id").style.visibility = "visible" '> Click me !</button> 
     <!-- Button to get textarea value -->
