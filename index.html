@@ -25,12 +25,9 @@ input,textarea,select {
 </head>
 <body>
     <!-- Textarea -->
-    <script>
-        function myFunction() {
-            document.getElementById("demo").innerHTML = "<textarea cols = '50' rows = '20' name='text' id='text_id' class='form-control' style='resize:vertical' ></textarea>";
-        }
-        </script>
-        <button type="button" onclick="myFunction()">Click here</button>
+    <textarea cols = '50' rows = '20' name='text' id='text_id' class='form-control' style='resize:vertical; visibility:hidden'> </textarea>
+
+    <button onClick='document.getElementById("text_id").style.visibility = "visible" '> Click me !</button> 
     <!-- Button to get textarea value -->
     <button onclick="getValue()">Get Value</button>
 
