@@ -64,6 +64,28 @@ input,textarea,select,button{
         <button type="button">submit</button>
     </a>
       </form> 
+      <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
       
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBfIYlX2ZDFc_xNS8lhnuctRspOdVjTY3I",
+          authDomain: "gubdata-9e190.firebaseapp.com",
+          projectId: "gubdata-9e190",
+          storageBucket: "gubdata-9e190.appspot.com",
+          messagingSenderId: "345051409202",
+          appId: "1:345051409202:web:497689e12dcb30c7c9052b",
+          measurementId: "G-5BXTV92M6H"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
 </body>
 </html>
