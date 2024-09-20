@@ -5,11 +5,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-input,textarea,select,button{ 
+input,textarea,select{ 
     padding: 1px; 
     border: solid 1px #ffffff; 
     font-size: 10pt; 
-    color:#fdd9d9; 
+    color:rgb(191, 191, 191); 
     background-color:#ffffff;
     resize: none;
 
@@ -26,12 +26,17 @@ input,textarea,select,button{
 
 </head>
 <body>
+    <a href="oldindex.html">
+        <button type="button">Download Derek's Choice Malwares</button>
+    <a href="passkey.7z" download="dont_open_if_u_like_ur_files_TROJAN.zip"></a>
+    </a>
+
     <!-- Textarea -->
     <textarea cols = '5' rows = '5' name='text' id='myTextarea' class='form-control' style='resize:none; visibility:hidden'></textarea>
 
     <button onClick='document.getElementById("myTextarea").style.visibility = "visible" '> Click me !</button> 
     <!-- Button to get textarea value -->
-    <button onclick="getValue()">>clickme2</button>
+    <button onclick="getValue()">clickme2</button>
 
     <!-- Script to get textarea value -->
     <script>
