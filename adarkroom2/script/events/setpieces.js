@@ -15,23 +15,32 @@ Events.Setpieces = {
 						min: 5,
 						max: 10,
 						chance: 1
-					
 					},
 					'energy blade': {
+						min: 1,
+						max: 1,
+						chance: 1
+					},
+					'energy cell': {
 						min: 5,
 						max: 10,
 						chance: 1
-					
-				},
-				'plasma rifle': {
+					},
+					'plasma rifle': {
+						min: 1,
+						max: 1,
+						chance: 0.5
+					},
+					'rifle': {
+						min: 1,
+						max: 1,
+						chance: 1
+					},
+					'bullets': {
 						min: 5,
 						max: 10,
 						chance: 1
-				},
-				'energy cell': {
-						min: 30,
-						max: 100,
-						chance: 1
+					}
 				},
 				onLoad: function() {
 					World.useOutpost();
@@ -3600,4 +3609,4 @@ Events.Setpieces = {
 		},
 		audio: AudioLibrary.LANDMARK_DESTROYED_VILLAGE
 	}
-}};
+};
