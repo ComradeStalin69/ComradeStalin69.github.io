@@ -134,7 +134,7 @@ var Path = {
 		
 		// Add the armour row
 		var armour = _("none");
-    if($SM.get('stores["kinetic armour"]', true) > -1)
+    if($SM.get('stores["kinetic armour"]', true) > 0)
 			armour = _("kinetic");
 		else if($SM.get('stores["s armour"]', true) > 0)
 			armour = _("steel");
@@ -168,12 +168,12 @@ var Path = {
 		// Add the non-craftables to the craftables
 		var carryable = $.extend({
 			'cured meat': { type: 'tool', desc: _('restores') + ' ' + World.MEAT_HEAL + ' ' + _('hp') },
-			'bullets': { type: 'tool', desc: _('use with rifle') },
+			'bullets': { type: 'tool', desc: _('fun little tings') },
 			'grenade': {type: 'weapon' },
 			'bolas': {type: 'weapon' },
-			'laser rifle': {type: 'weapon' },
-			'energy cell': {type: 'tool', desc: _('emits a soft red glow') },
-			'bayonet': {type: 'weapon' },
+			'laser rifle': {type: 'weapon', desc: _('pew pew')},
+			'energy cell': {type: 'tool', desc: _('even funner little things - Derek') },
+			'bayonet': {type: 'weapon', desc:_('pokey pokey stabby stab - Derek') },
 			'charm': {type: 'tool'},
 			'alien alloy': { type: 'tool' },
 			'medicine': {type: 'tool', desc: _('restores') + ' ' + World.MEDS_HEAL + ' ' + _('hp') }
