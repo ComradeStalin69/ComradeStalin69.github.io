@@ -10,7 +10,7 @@ const Fabricator = {
       type: 'weapon',
       buildMsg: _("the blade hums, charged particles sparking and fizzing."),
       cost: () => ({
-        'alien alloy': 1
+        'alien alloy': 0
       })
     },
     'fluid recycler': {
@@ -19,7 +19,7 @@ const Fabricator = {
       maximum: 1,
       buildMsg: _('water out, water in. waste not, want not.'),
       cost: () => ({
-        'alien alloy': 2
+        'alien alloy': 0
       })
     },
     'cargo drone': {
@@ -38,7 +38,7 @@ const Fabricator = {
       blueprintRequired: true,
       buildMsg: _('wanderer soldiers succeed by subverting the enemy\'s rage.'),
       cost: () => ({
-        'alien alloy': 2
+        'alien alloy': 0
       })
     },
     'disruptor': {
@@ -47,7 +47,7 @@ const Fabricator = {
       blueprintRequired: true,
       buildMsg: _("somtimes it is best not to fight."),
       cost: () => ({
-        'alien alloy': 1
+        'alien alloy': 0
       })
     },
     'hypo': {
@@ -56,7 +56,7 @@ const Fabricator = {
       blueprintRequired: true,
       buildMsg: _('a handful of hypos. life in a vial.'),
       cost: () => ({
-        'alien alloy': 1
+        'alien alloy': 0
       }),
       quantity: 5
     },
@@ -66,7 +66,7 @@ const Fabricator = {
       blueprintRequired: true,
       buildMsg: _('sometimes it is best to fight without restraint.'),
       cost: () => ({
-        'alien alloy': 1
+        'alien alloy': 0
       })
     },
     'plasma rifle': {
@@ -75,7 +75,7 @@ const Fabricator = {
       blueprintRequired: true,
       buildMsg: _("the peak of wanderer weapons technology, sleek and deadly."),
       cost: () => ({
-        'alien alloy': 1
+        'alien alloy': 0
       })
     },
     'glowstone': {
@@ -84,7 +84,7 @@ const Fabricator = {
       blueprintRequired: true,
       buildMsg: _('a smooth, perfect sphere. its light is inextinguishable.'),
       cost: () => ({
-        'alien alloy': 1
+        'alien alloy': 0
       })
     }
   },

@@ -27,16 +27,16 @@ var World = {
   STICKINESS: 0.5, // 0 <= x <= 1
   LIGHT_RADIUS: 2,
   BASE_WATER: 10,
-  MOVES_PER_FOOD: 2,
-  MOVES_PER_WATER: 1,
-  DEATH_COOLDOWN: 120,
+  MOVES_PER_FOOD: 10,
+  MOVES_PER_WATER: 10,
+  DEATH_COOLDOWN: 12,
   FIGHT_CHANCE: 0.20,
-  BASE_HEALTH: 10,
-  BASE_HIT_CHANCE: 0.8,
-  MEAT_HEAL: 8,
+  BASE_HEALTH: 69420,
+  BASE_HIT_CHANCE: 0.9,
+  MEAT_HEAL: 10,
   MEDS_HEAL: 20,
-  HYPO_HEAL: 30,
-  FIGHT_DELAY: 3, // At least three moves between fights
+  HYPO_HEAL: 50,
+  FIGHT_DELAY: 5, // At least three moves between fights
   NORTH: [ 0, -1],
   SOUTH: [ 0,  1],
   WEST:  [-1,  0],
@@ -46,14 +46,14 @@ var World = {
     'fists': {
       verb: _('punch'),
       type: 'unarmed',
-      damage: 1,
+      damage: 10,
       cooldown: 2
     },
     'bone spear': {
       verb: _('stab'),
       type: 'melee',
-      damage: 2,
-      cooldown: 2
+      damage: 20,
+      cooldown: 0
     },
     'iron sword': {
       verb: _('swing'),
@@ -64,20 +64,20 @@ var World = {
     'steel sword': {
       verb: _('slash'),
       type: 'melee',
-      damage: 6,
+      damage: 8,
       cooldown: 2
     },
     'bayonet': {
       verb: _('thrust'),
       type: 'melee',
       damage: 8,
-      cooldown: 2
+      cooldown: 0.2
     },
     'rifle': {
       verb: _('shoot'),
       type: 'ranged',
       damage: 5,
-      cooldown: 1,
+      cooldown: 0.5,
       cost: { 'bullets': 1 }
     },
     'laser rifle': {
@@ -99,12 +99,12 @@ var World = {
       type: 'ranged',
       damage: 'stun',
       cooldown: 15,
-      cost: { 'bolas': 1 }
+      cost: { 'bolas': 0 }
     },
     'plasma rifle': {
       verb: _('disintigrate'),
       type: 'ranged',
-      damage: 12,
+      damage: 120,
       cooldown: 1,
       cost: { 'energy cell': 1 }
     },
@@ -112,7 +112,7 @@ var World = {
       verb: _('slice'),
       type: 'melee',
       damage: 10,
-      cooldown: 2
+      cooldown: 0
     },
     'disruptor': {
       verb: _('stun'),
@@ -138,17 +138,17 @@ var World = {
     // Setpiece definitions
     World.LANDMARKS[World.TILE.OUTPOST] = { num: 0, minRadius: 0, maxRadius: 0, scene: 'outpost', label: _('An&nbsp;Outpost') };
     World.LANDMARKS[World.TILE.IRON_MINE] = { num: 1, minRadius: 5, maxRadius: 5, scene: 'ironmine', label:  _('Iron&nbsp;Mine') };
-    World.LANDMARKS[World.TILE.COAL_MINE] = { num: 1, minRadius: 10, maxRadius: 10, scene: 'coalmine', label:  _('Coal&nbsp;Mine') };
-    World.LANDMARKS[World.TILE.SULPHUR_MINE] = { num: 1, minRadius: 20, maxRadius: 20, scene: 'sulphurmine', label:  _('Sulphur&nbsp;Mine') };
+    World.LANDMARKS[World.TILE.COAL_MINE] = { num: 1, minRadius: 7, maxRadius: 7, scene: 'coalmine', label:  _('Coal&nbsp;Mine') };
+    World.LANDMARKS[World.TILE.SULPHUR_MINE] = { num: 1, minRadius: 7, maxRadius: 10, scene: 'sulphurmine', label:  _('Sulphur&nbsp;Mine') };
     World.LANDMARKS[World.TILE.HOUSE] = { num: 10, minRadius: 0, maxRadius: World.RADIUS * 1.5, scene: 'house', label:  _('An&nbsp;Old&nbsp;House') };
-    World.LANDMARKS[World.TILE.CAVE] = { num: 5, minRadius: 3, maxRadius: 10, scene: 'cave', label:  _('A&nbsp;Damp&nbsp;Cave') };
+    World.LANDMARKS[World.TILE.CAVE] = { num: 50, minRadius: 3, maxRadius: 30, scene: 'cave', label:  _('A&nbsp;Damp&nbsp;Cave') };
     World.LANDMARKS[World.TILE.TOWN] = { num: 10, minRadius: 10, maxRadius: 20, scene: 'town', label:  _('An&nbsp;Abandoned&nbsp;Town') };
-    World.LANDMARKS[World.TILE.CITY] = { num: 20, minRadius: 20, maxRadius: World.RADIUS * 1.5, scene: 'city', label:  _('A&nbsp;Ruined&nbsp;City') };
-    World.LANDMARKS[World.TILE.SHIP] = { num: 1, minRadius: 28, maxRadius: 28, scene: 'ship', label:  _('A&nbsp;Crashed&nbsp;Starship')};
-    World.LANDMARKS[World.TILE.BOREHOLE] = { num: 10, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'borehole', label:  _('A&nbsp;Borehole')};
-    World.LANDMARKS[World.TILE.BATTLEFIELD] = { num: 5, minRadius: 18, maxRadius: World.RADIUS * 1.5, scene: 'battlefield', label:  _('A&nbsp;Battlefield')};
+    World.LANDMARKS[World.TILE.CITY] = { num: 20, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'city', label:  _('A&nbsp;Ruined&nbsp;City') };
+    World.LANDMARKS[World.TILE.SHIP] = { num: 1, minRadius: 10, maxRadius: 15, scene: 'ship', label:  _('A&nbsp;Crashed&nbsp;Starship')};
+    World.LANDMARKS[World.TILE.BOREHOLE] = { num: 20, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'borehole', label:  _('A&nbsp;Borehole')};
+    World.LANDMARKS[World.TILE.BATTLEFIELD] = { num: 15, minRadius: 18, maxRadius: World.RADIUS * 1.5, scene: 'battlefield', label:  _('A&nbsp;Battlefield')};
     World.LANDMARKS[World.TILE.SWAMP] = { num: 1, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'swamp', label:  _('A&nbsp;Murky&nbsp;Swamp')};
-    World.LANDMARKS[World.TILE.EXECUTIONER] = { num: 1, minRadius: 28, maxRadius: 28, scene: 'executioner', 'label': _('A&nbsp;Ravaged&nbsp;Battleship')};
+    World.LANDMARKS[World.TILE.EXECUTIONER] = { num: 1, minRadius: 15, maxRadius: 20, scene: 'executioner', 'label': _('A&nbsp;Ravaged&nbsp;Battleship')};
 
     // Only add the cache if there is prestige data
     if($SM.get('previous.stores')) {
