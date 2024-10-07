@@ -25,7 +25,7 @@ var World = {
   TILE_PROBS: {},
   LANDMARKS: {},
   STICKINESS: 0.5, // 0 <= x <= 1
-  LIGHT_RADIUS: 2,
+  LIGHT_RADIUS: 10,
   BASE_WATER: 10,
   MOVES_PER_FOOD: 10,
   MOVES_PER_WATER: 10,
