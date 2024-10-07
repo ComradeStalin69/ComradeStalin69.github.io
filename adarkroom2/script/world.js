@@ -36,7 +36,7 @@ var World = {
   MEAT_HEAL: 10,
   MEDS_HEAL: 20,
   HYPO_HEAL: 50,
-  FIGHT_DELAY: 5, // At least three moves between fights
+  FIGHT_DELAY: 30, // At least three moves between fights
   NORTH: [ 0, -1],
   SOUTH: [ 0,  1],
   WEST:  [-1,  0],
